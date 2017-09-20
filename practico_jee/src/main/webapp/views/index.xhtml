@@ -1,0 +1,15 @@
+<ui:composition template="/views/template/template.xhtml"
+  xmlns="http://www.w3.org/1999/xhtml"
+  xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+  xmlns:h="http://xmlns.jcp.org/jsf/html"
+  xmlns:f="http://xmlns.jcp.org/jsf/core"
+  xmlns:p="http://xmlns.jcp.org/jsf/passthrough">
+<ui:define name="title"><h:outputText value="Práctico Java EE - Principal" /></ui:define>
+<ui:define name="content">
+<h:form id="indexForm">
+    <div class="row">
+      <div class="col-sm-offset-2 col-sm-4"><p><h:outputText id="welcomeMessage" value="Bienvenido  " /><h:outputText id="welcomeUserMessage" rendered="#{accountsController.loggedIn}" value="#{accountsController.currentUser.name}." /></p></div>
+    </div>
+</h:form>
+</ui:define>
+</ui:composition>
